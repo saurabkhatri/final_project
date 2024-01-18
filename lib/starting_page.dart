@@ -22,10 +22,10 @@ class _Staring_PageState extends State<Staring_Page> {
     );
   }
 
-  Future<void> handleRouting() async{
+  Future<void> handleRouting() async {
     final hasSeenOnboarding = await SharedPref.getOnboardingStatus();
 
-    if(!hasSeenOnboarding) {
+    if (!hasSeenOnboarding) {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder:
               (context) => OnBoardingPage()));
@@ -35,7 +35,7 @@ class _Staring_PageState extends State<Staring_Page> {
     else {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder:
-          (context) => Dashboard() ));
-
+              (context) => Dashboard()));
+    }
   }
 }
